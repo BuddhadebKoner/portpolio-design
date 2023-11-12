@@ -3,11 +3,11 @@
 
 .material-symbols-outlined {
     font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
-  }
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
 
 :root {
     --background: #003459;
@@ -139,6 +139,7 @@ main {
     width: 29%;
     border-radius: 1vw;
 }
+
 .my-resume:hover {
     background-color: var(--pink-deep);
 }
@@ -253,8 +254,44 @@ main {
     opacity: 0;
     animation: fadeIn 2s cubic-bezier(0.3, 0.56, 0, 0.92) forwards;
 }
+
 @keyframes fadeIn {
     to {
         opacity: 1;
     }
+}
+
+/* for responsive  */
+@media screen and (max-width: 710px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .logo{
+        font-size: 5vw;
+    }
+
+    .first-row,
+    .sec-row,
+    .forth-row {
+        flex-direction: column;
+        height: fit-content;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: 0px;
+        width: 100%;
+        height: 30vh;
+    }
+
+    .project,
+    .contact,
+    .webdev,
+    .colab,
+    .my-resume,
+    .about-me {
+        width: 100%;
+        height: 50%;
+        margin: 5px;
+    }
+
 }

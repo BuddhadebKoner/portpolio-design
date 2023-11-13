@@ -14,7 +14,7 @@
     --text-light: #edf6f9;
     --text-dark: #252422;
 
-    --nav-back: #282626;
+    /* --nav-back: #282626; */
 
     --pink-deep: #ffafcc;
     --pink-light: #ffc8dd;
@@ -67,7 +67,8 @@ body {
 
 /* Navigation Bar Styles */
 nav {
-    background-color: var(--nav-back);
+    background-color: var(--background);
+    /* background: transparent; */
     width: 100vw;
     height: 80px;
     color: var(--text-light);

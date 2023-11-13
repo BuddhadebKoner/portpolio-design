@@ -23,6 +23,13 @@
             overflow-y: auto;
         }
 
+        #menu-icon {
+            position: fixed;
+            left: 1vw;
+            top: 1vw;
+            /* display: none; */
+        }
+
         .about {
             padding: 50px;
             width: 100%;
@@ -66,12 +73,39 @@
             text-decoration: none;
             color: rgb(12, 169, 231);
         }
+
+        /* sidebar */
+        .sidebar {
+            display: none;
+            background-color: aqua;
+            width: 300px;
+            height: 100vh;
+            position: fixed;
+            animation: sidebarAppear 0.5s;
+        }
+
+        @keyframes sidebarAppear {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 300px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <!-- About Section -->
+
+
+    <div class="sidebar" id="Sidebar">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda eos ipsum voluptate atque sit adipisci earum itaque sunt quia fugiat, temporibus explicabo minima voluptas obcaecati esse ab exercitationem tenetur. Saepe?
+    </div>
+
     <div class="about-head-div" id="about">
+        <span id="menu-icon"><img src="/img/menu_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
         <span id="about-heading">About</span>
     </div>
     <section class="about">
@@ -143,6 +177,22 @@
         </p>
 
     </section>
+
+    <script>
+        const sidebar = document.getElementById('Sidebar');
+        const icon = document.getElementById('menu-icon');
+
+        icon.addEventListener('click', function () {
+
+            if(sidebar.style.display === 'none' || sidebar.style.display === ''){
+                sidebar.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }else{
+                sidebar.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 </body>
 
 </html>
